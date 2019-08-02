@@ -8,17 +8,16 @@ import androidx.room.PrimaryKey;
 public class User {
 
     @PrimaryKey(autoGenerate = true)
-    private int id;
+    public int id;
 
     @ColumnInfo(name = "name")
-    private String name;
+    public String name;
 
     @ColumnInfo(name = "address")
-    private String address;
+    public String address;
 
     @ColumnInfo(name = "phone")
-    private String phone;
-
+    public String phone;
 
 
     public int getId() {

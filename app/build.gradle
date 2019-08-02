@@ -24,8 +24,10 @@ android {
     }
 
     dataBinding{
-        enabled = true
+        enabled true
     }
+
+
 
 }
 
@@ -49,9 +51,6 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
 
-    // database
-    implementation "androidx.room:room-rxjava2:$rootProject.roomDatabaseVersion"
-    annotationProcessor "androidx.room:room-compiler:$rootProject.roomDatabaseVersion"
 
     // font
     implementation "uk.co.chrisjenx:calligraphy:$rootProject.calligraphyVersion"
@@ -95,4 +94,8 @@ dependencies {
     // view model
     implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.lifecycleVersion"
     annotationProcessor "androidx.lifecycle:lifecycle-compiler:$rootProject.lifecycleVersion"
+
+    // Room
+    implementation "android.arch.persistence.room:runtime:1.0.0"
+    annotationProcessor "android.arch.persistence.room:compiler:1.0.0"
 }

@@ -40,8 +40,9 @@ public class AppModule {
     @Provides
     static AppDatabase providerAppDatabse(Context context){
 
-        return Room.databaseBuilder(context, AppDatabase.class, "sample.sqlite")
+        return Room.databaseBuilder(context, AppDatabase.class, "test")
                 .allowMainThreadQueries()
+                .fallbackToDestructiveMigration()
                 .build();
 
     }

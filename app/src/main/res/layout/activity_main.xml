@@ -9,13 +9,12 @@
         <import type="android.view.View" />
 
 
-
         <variable
             name="viewModel"
             type="techy.ap.sample.mvvm.viewmodel.MainViewModel" />
 
         <variable
-            name="navigator"
+            name="presenter"
             type="techy.ap.sample.mvvm.presenter.MainNavigator" />
 
 
@@ -35,6 +34,7 @@
             android:layout_marginRight="10dp"
             android:hint="Name"
             android:padding="10dp"
+            android:text="@={viewModel.name}"
 
             />
 
@@ -47,7 +47,8 @@
             android:layout_marginRight="10dp"
             android:hint="Phone"
             android:inputType="phone"
-            android:padding="10dp" />
+            android:padding="10dp"
+            android:text="@={viewModel.phone}" />
 
         <EditText
             android:id="@+id/address"
@@ -57,7 +58,8 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:hint="Address"
-            android:padding="10dp" />
+            android:padding="10dp"
+            android:text="@={viewModel.address}" />
 
 
         <Button
@@ -69,8 +71,8 @@
             android:layout_marginTop="20sp"
             android:layout_marginRight="10dp"
             android:hint="Save"
+            android:onClick="@{() -> presenter.save()}"
             android:padding="10dp" />
-
 
 
     </RelativeLayout>
